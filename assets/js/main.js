@@ -146,20 +146,24 @@ function updateFeedbackDisplay() {
 // B1: Thêm id="switch-theme-btn"
 // B2: Thêm thẻ span
 window.addEventListener("template-loaded", () => {
-    const switchBtn = document.querySelector("#switch-theme-btn");
+    const switchBtn = document.querySelectorAll(".switch-theme-btn");
     if (switchBtn) {
-        switchBtn.onclick = function () {
+        switchBtn.forEach((item) => {
+            item.onclick = function () {
+                const isDark = localStorage.dark === "true";
+                document
+                    .querySelector("html")
+                    .classList.toggle("dark", !isDark);
+                localStorage.setItem("dark", !isDark);
+                item.querySelector("span").textContent = isDark
+                    ? "Dark mode"
+                    : "Light mode";
+            };
             const isDark = localStorage.dark === "true";
-            document.querySelector("html").classList.toggle("dark", !isDark);
-            localStorage.setItem("dark", !isDark);
-            switchBtn.querySelector("span").textContent = isDark
-                ? "Dark mode"
-                : "Light mode";
-        };
-        const isDark = localStorage.dark === "true";
-        switchBtn.querySelector("span").textContent = isDark
-            ? "Light mode"
-            : "Dark mode";
+            item.querySelector("span").textContent = isDark
+                ? "Light mode"
+                : "Dark mode";
+        });
     }
 });
 
