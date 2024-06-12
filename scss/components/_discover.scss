@@ -6,7 +6,7 @@
 }
 
 .discover {
-    margin-top: 150px;
+    margin-top: 100px;
 
     @include abstracts.screen(lg) {
         margin-top: 100px;
@@ -34,7 +34,7 @@
         }
 
         &--color {
-            background: #39c5d7;
+            background: var(--primary-color-btn);
             background: linear-gradient(
                 to right,
                 #39c5d7 0%,
@@ -59,7 +59,7 @@
         display: flex;
         justify-content: center;
         margin: 55px auto 0;
-        background: #fff;
+        background: var(--body-bg-color);
     }
 }
 
@@ -84,14 +84,16 @@
         height: 128px;
         padding: 20px;
         border-radius: 12px;
-        background: #fff;
-        box-shadow: 0px 20px 90px 0px rgba(25, 27, 29, 0.1);
+        background: var(--body-bg-color);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         transition: all 0.7s ease-in-out;
     }
 
     &__name {
         margin-top: 4px;
-        color: #f15d7c;
+        color: var(--text-red-pink);
     }
 
     &__box {
@@ -101,7 +103,7 @@
     }
 
     &__rate {
-        color: var(--text-dark);
+        color: var(--primary-text-color);
         font-size: 1.4rem;
         font-weight: 600;
         line-height: 1.71;

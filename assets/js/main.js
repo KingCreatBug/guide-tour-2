@@ -142,35 +142,26 @@ function updateFeedbackDisplay() {
     });
 }
 
-prevButton.addEventListener("click", () => {
-    currentIndex =
-        (currentIndex - 1 + feedbackContainers.length) %
-        feedbackContainers.length;
-    updateFeedbackDisplay();
+// Đổi Theme sáng tối cho page
+// B1: Thêm id="switch-theme-btn"
+// B2: Thêm thẻ span
+window.addEventListener("template-loaded", () => {
+    const switchBtn = document.querySelector("#switch-theme-btn");
+    if (switchBtn) {
+        switchBtn.onclick = function () {
+            const isDark = localStorage.dark === "true";
+            document.querySelector("html").classList.toggle("dark", !isDark);
+            localStorage.setItem("dark", !isDark);
+            switchBtn.querySelector("span").textContent = isDark
+                ? "Dark mode"
+                : "Light mode";
+        };
+        const isDark = localStorage.dark === "true";
+        switchBtn.querySelector("span").textContent = isDark
+            ? "Light mode"
+            : "Dark mode";
+    }
 });
 
-nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % feedbackContainers.length;
-    updateFeedbackDisplay();
-});
-
-updateFeedbackDisplay();
-
-// let slide = 0;
-// const slides = document.querySelectorAll(".partner__inner a");
-// const totalSlides = slides.length;
-
-// function showSlide(index) {
-//     const partnerInner = document.getElementById("partner");
-//     partnerInner.style.transform = `translateX(${-index * 100}%)`;
-// }
-
-// function autoSlide() {
-//     slide = (slide + 1) % totalSlides;
-//     showSlide(slide);
-// }
-
-// setInterval(autoSlide, 1000);
-
-// // Initial display
-// showSlide(slide);
+const isDark = localStorage.dark === "true";
+document.querySelector("html").classList.toggle("dark", isDark);

@@ -8,7 +8,7 @@
 .partner {
     width: 100%;
     overflow: hidden;
-    background: #ffc20066;
+    background: var(--partner-bg-color);
 
     &__inner {
         @extend %flexItemCenter;

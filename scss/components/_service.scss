@@ -6,7 +6,7 @@
 }
 
 .service {
-    margin-top: 250px;
+    margin-top: 100px;
     @extend %flexItemCenter;
     gap: 210px;
 
@@ -40,7 +40,7 @@
     }
 
     &__btn {
-        background: #fff;
+        background: var(--body-bg-color);
         padding: 15px 35px;
         margin-top: 38px;
 
@@ -79,8 +79,10 @@
 
     &:hover {
         transform: translateX(100px);
-        background: #fff;
-        box-shadow: 0px 20px 90px 0px rgba(25, 27, 29, 0.1);
+        background: var(--navbar-bg-color);
+        // box-shadow: 0px 20px 90px 0px rgba(25, 27, 29, 0.1);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+            rgba(0, 0, 0, 0.22) 0px 10px 10px;
         cursor: default;
 
         @include abstracts.screen(lg) {
@@ -100,7 +102,7 @@
 
     &__title {
         margin-bottom: 8px;
-        color: var(--text-dark);
+        color: var(--primary-text-color);
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.25;

@@ -6,7 +6,7 @@
 }
 
 .new {
-    margin-top: 185px;
+    margin-top: 150px;
 
     @include abstracts.screen(lg) {
         margin-top: 135px;
@@ -29,7 +29,7 @@
         height: 500px;
         border-radius: 12px;
         object-fit: cover;
-        border: 1px solid var(--primary-color-bg);
+        border: 1px solid var(--border-color);
 
         &--small {
             height: 182px;
@@ -46,7 +46,7 @@
 
     &__date {
         margin-top: 20px;
-        color: var(--text-gray);
+        color: var(--secondary-text-color);
         font-size: 1.4rem;
         line-height: 1.71;
     }
@@ -66,10 +66,10 @@
         display: flex;
         justify-content: center;
         margin: 70px auto 0;
-        background: #fff;
+        background: var(--body-bg-color);
     }
 }
 
 .new-info__container:hover > .new-info__title {
-    color: #f15d7c;
+    color: var(--text-red-pink);
 }

@@ -20,13 +20,17 @@
         width: 54px;
         height: 54px;
         object-fit: cover;
+
+        &--white {
+            display: none;
+        }
     }
 
     &__text {
         // color: var(--text-dark);
         font-size: 2.4rem;
         font-weight: 700;
-        background: #39c5d7;
+        background: var(--primary-color-btn);
         background: linear-gradient(
             to right,
             #39c5d7 0%,

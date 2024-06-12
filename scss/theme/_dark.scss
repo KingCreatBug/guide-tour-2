@@ -1,0 +1,33 @@
+html.dark {
+    // Background
+    --body-bg-color: #292e39;
+    --navbar-bg-color: #171c28;
+    --blog-bg-color: #171c2881;
+    --partner-bg-color: #f5d15c54;
+    // Text
+    --primary-text-color: #fff;
+    --secondary-text-color: #9e9da8;
+    --text-white: #fff;
+    --text-red-pink: #f15d7c;
+    // Opacity
+    --opacity: 0.9;
+    //  Border
+    --border-color: #171c28;
+    // Button
+    --primary-color-btn: #39c5d7;
+    --second-color-btn: #ffc200;
+    // Icon
+    --icon-color: #fff;
+}
+
+html.dark .logo__img--white {
+    display: block;
+}
+
+html.dark .logo__img--black {
+    display: none;
+}
+
+html.dark .header-action__icon path {
+    fill: #fff;
+}

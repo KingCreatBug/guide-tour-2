@@ -1,11 +1,21 @@
 html {
-    // Text
-    --text-dark: #191b1d;
-    --text-gray: #4e5358;
     // Background
-    --primary-color-bg: #fff9e5;
-    --second-color-bg: #1eb482;
+    --body-bg-color: #fff;
+    --navbar-bg-color: #fff;
+    --blog-bg-color: #ebebeb9c;
+    --partner-bg-color: #ffc20066;
+    // Text
+    --primary-text-color: #191b1d;
+    --secondary-text-color: #4e5358;
+    --text-white: #fff;
+    --text-red-pink: #f15d7c;
+    //  Border
+    --border-color: #ebebeb;
+    // Opacity
+    --opacity: 0.3;
     // Button
-    --primary-color-btn: #ff5b26;
+    --primary-color-btn: #39c5d7;
     --second-color-btn: #ffc200;
+    // Icon
+    --icon-color: #191b1d;
 }

@@ -5,10 +5,10 @@
     padding: 8px 24px;
     border-radius: 99px;
 
-    background: #fff;
-    border: 1px solid #39c5d7;
+    background: var(--body-bg-color);
+    border: 1px solid var(--primary-color-btn);
 
-    color: #39c5d7;
+    color: var(--primary-color-btn);
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.75;
@@ -16,12 +16,19 @@
     transition: all 0.3s ease;
 
     &:hover {
-        color: #fff;
-        background: #39c5d7;
+        color: var(--body-bg-color);
+        background: var(--primary-color-btn);
     }
 
     @include abstracts.screen(lg) {
         padding: 5px 18px;
         font-size: 1.6rem;
+    }
+
+    &--nav {
+        background: var(--navbar-bg-color);
+        &:hover {
+            color: var(--navbar-bg-color);
+        }
     }
 }
